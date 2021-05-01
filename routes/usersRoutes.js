@@ -48,7 +48,7 @@ router.post('/register', (request, response) => {
         User.findOne({ email: email })
             .then(user => {
                 if (user) {
-                    errors.push({ msg: 'Email is already registered' })
+                    errors.push({ msg: 'Email is already registered' });
                     response.render('register', {
                         errors,
                         name,
